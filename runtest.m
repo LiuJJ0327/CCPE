@@ -1,4 +1,7 @@
 load('testdata')
 X=testdata;
 X=log2(X+1);
-[pseudotime] = CCPE(X);
+lambda=50;
+gamma=10;
+sigma=0.001;  %Gaussian distribution
+[pseudotime] = CCPE(X,lambda,gamma,sigma);
