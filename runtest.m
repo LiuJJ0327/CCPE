@@ -1,3 +1,4 @@
+addpath(genpath('../drtoolbox'));
 load('mesc_preprocessed.mat')
 lambda=50;
 gamma=50;
