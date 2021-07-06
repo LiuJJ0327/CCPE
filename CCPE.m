@@ -1,8 +1,7 @@
 function [pseudotime] = CCPE(X,lambda,gamma,sigma)
-%%initial W, Z
-[coeff,score,latent] = pca(X');
-W=coeff(:,1:3);
-Z=score(:,1:3);
+[mappedX, mapping] = compute_mapping(X', 'PCA', 3);
+W=mapping.M;
+Z=mappedX;
 Z=Z';
 N=size(Z,2);
 k=N;
@@ -28,7 +27,7 @@ while iter < 200
       MSE_error=error1+error2+error3
       iter=iter+1;
       if iter > 199
-         fprintf('iter achieved 50!\n');
+         fprintf('iter achieved!\n');
          break;
       end     
 end
