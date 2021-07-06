@@ -1,4 +1,4 @@
-function [pseudotime] = CCPE(X)
+function [pseudotime] = CCPE(X,lambda,gamma,sigma)
 %%initial W, Z
 [coeff,score,latent] = pca(X');
 W=coeff(:,1:3);
@@ -9,13 +9,9 @@ k=N;
 vaxis='x';
 %initial Y
 Y=Z;
-%initial lambda, gamma
-lambda=50;
-gamma=10;
-sigma=0.001;  %Gaussian distribution
 
 iter = 0;
-while iter < 50
+while iter < 200
       [x_centre, y_centre,Z_p,a,v,th] = HelixFit(Z,vaxis);
       [R] = get_R(Z,Y,sigma);
       T=diag(diag(ones(k,N)*R));
@@ -31,7 +27,7 @@ while iter < 50
       error3=gamma*(trace(Z*Z')-2*trace(R'*Z'*Y)+trace(Y*T*Y'));
       MSE_error=error1+error2+error3
       iter=iter+1;
-      if iter > 49
+      if iter > 199
          fprintf('iter achieved 50!\n');
          break;
       end     
