@@ -3,8 +3,10 @@ CCPE is a cell cycle pseudotime estimation method characterizing cell cycle timi
 
 ## Quick Start:<br/>
 drtoolbox was downloaded from https://lvdmaaten.github.io/drtoolbox/<br/>
+```bash
 wget https://github.com/LiuJJ0327/CCPE/archive/refs/heads/main.zip<br/>
 unzip CCPE-main.zip<br/>
 cd CCPE-main/<br/>
 matlab run.m<br/>
+```
 ![image](https://github.com/LiuJJ0327/CCPE/blob/main/images/figure1.PNG)
