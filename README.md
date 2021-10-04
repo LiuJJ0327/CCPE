@@ -57,7 +57,7 @@ ggplot(CCPE_metrics,aes(metrics,value,fill=metrics))+geom_bar(stat="identity",po
 
 ### 4. Differential gene expression analysis <br/>
 Differentially expressed genes were identified using [Deseq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html)<br/>
-Gene set enrichment analysis was using [Enrichr](https://maayanlab.cloud/Enrichr/)
+Gene set enrichment analysis was using [Enrichr](https://maayanlab.cloud/Enrichr/)<br/>
 ![image](https://github.com/LiuJJ0327/CCPE/blob/main/images/4_DEG.PNG)<br/>
 
 ### 5. UMAP plot of simulated dataset with dropouts<br/>
