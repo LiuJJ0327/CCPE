@@ -25,11 +25,13 @@ The reproduction of the applications and analyses in our paper can be available 
 ```bash
 Rscript reproduction/pseudotime_analysis/4_analysis_R/plot_pseudotime.r
 ```
+![image](https://github.com/LiuJJ0327/CCPE/blob/main/images/1_pseudotime.PNG)<br/>
 
 ### 2. Gene expression analysis (example: Aurka)<br/>
 ```bash
 Rscript reproduction/pseudotime_analysis/4_analysis_R/correlation.r
 ```
+![image](https://github.com/LiuJJ0327/CCPE/blob/main/images/2_gene_expression_1.PNG)<br/>
 
 ```bash
 library(Seurat)
@@ -38,6 +40,7 @@ marrow <- CreateSeuratObject(raw.data  = mesc)
 marrow@ident<-factor(marrow@ident,levels = c("G1","S","G2M"))
 RidgePlot(object =marrow, features = 'Aurka')
 ```
+![image](https://github.com/LiuJJ0327/CCPE/blob/main/images/2_gene_expression_2.PNG)<br/>
 
 ### 3. Evaluation of the performance using then clustering metrics (example: E-MTAB-2805 mESCs data)<br/>
 ```bash
@@ -46,19 +49,22 @@ matlab estimate_mtrics/Evaluate.m
 plot evaluation result of CCPE
 ```bash
 library(ggplot2)
-metrics<-<-read.csv("./comparison/2_mesc_288/evaulate_mesc_avg.csv",header = T)
+metrics<-read.csv("./comparison/2_mesc_288/evaulate_mesc_avg.csv",header = T)
 CCPE_metrics<-metrics[metrics$method=='CCPE',]
 ggplot(CCPE_metrics,aes(metrics,value,fill=metrics))+geom_bar(stat="identity",position="dodge")
 ```
+![image](https://github.com/LiuJJ0327/CCPE/blob/main/images/3_evaluation.PNG)<br/>
 
 ### 4. Differential gene expression analysis <br/>
-Differentially expressed genes were identified using [Deseq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html)
+Differentially expressed genes were identified using [Deseq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html)<br/>
 Gene set enrichment analysis was using [Enrichr](https://maayanlab.cloud/Enrichr/)
+![image](https://github.com/LiuJJ0327/CCPE/blob/main/images/4_DEG.PNG)<br/>
 
 ### 5. UMAP plot of simulated dataset with dropouts<br/>
 ```bash
 Rscript UMAP_cancer_cellline.r
 ```
+![image](https://github.com/LiuJJ0327/CCPE/blob/main/images/5_UMAP.PNG)<br/>
 
 ### 6. Cell cycle effect removal<br/>
 
