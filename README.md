@@ -67,4 +67,8 @@ Rscript UMAP_cancer_cellline.r
 ![image](https://github.com/LiuJJ0327/CCPE/blob/main/images/5_UMAP.PNG)<br/>
 
 ### 6. Cell cycle effect removal<br/>
+```bash
+Rscript reproduction/cell_cycle_effect_removal/cellcycle_removal.r
+```
+![image](https://github.com/LiuJJ0327/CCPE/blob/main/images/6_removal.PNG)<br/>
 
