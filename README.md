@@ -49,7 +49,7 @@ matlab estimate_mtrics/Evaluate.m
 plot evaluation result of CCPE
 ```bash
 library(ggplot2)
-metrics<-read.csv("./comparison/2_mesc_288/evaulate_mesc_avg.csv",header = T)
+metrics<-read.csv("./comparison/2_mesc_288/evaulation_mesc_avg.csv",header = T)
 CCPE_metrics<-metrics[metrics$method=='CCPE',]
 ggplot(CCPE_metrics,aes(metrics,value,fill=metrics))+geom_bar(stat="identity",position="dodge")
 ```
