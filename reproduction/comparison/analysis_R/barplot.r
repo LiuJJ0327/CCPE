@@ -19,7 +19,8 @@ mytheme <- theme_bw() + theme(
 #ten metrics
 #mESCs Quartz-Seq data
 data<-read.csv("./comparison/1_mesc_Quartz/evaluation_mesc_Quartz_avg.csv",header = T)
-data$metrics<-factor(data$metrics,levels = c("RI","ARI","NMI","ACC","F_score","PREC","REC","G_mean","Jacc","SPEC"))
+colnames(data)<-c('method','metrics','value')
+data$metrics<-factor(data$metrics,levels = c("ARI","NMI","RI","Accuracy","Precision","Recall","Fscore"))
 data$method<-factor(data$method,levels = c("CCPE","CYCLOPS","cyclone","Cyclum","Seurat","reCAT"))
 
 ggplot(data,aes(metrics,value,fill=method))+
@@ -28,7 +29,8 @@ ggplot(data,aes(metrics,value,fill=method))+
 
 #E-MTAB-2805 mESCs data
 data2<-read.csv("./comparison/2_mesc_288/evaulate_mesc_avg.csv",header = T)
-data2$metrics<-factor(data2$metrics,levels = c("RI","ARI","NMI","ACC","F_score","PREC","REC","G_mean","Jacc","SPEC"))
+colnames(data2)<-c('method','metrics','value')
+data2$metrics<-factor(data2$metrics,levels = c("ARI","NMI","RI","Accuracy","Precision","Recall","Fscore"))
 data2$method<-factor(data2$method,levels = c("CCPE","cyclone","Cyclum","Seurat","CYCLOPS","reCAT"))
 
 ggplot(data2,aes(metrics,value,fill=method))+

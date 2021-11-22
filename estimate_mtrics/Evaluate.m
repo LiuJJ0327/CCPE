@@ -33,5 +33,4 @@ gmean = sqrt(tp_rate*tn_rate);
 Jaccard=tp/(tp+fn+fp); %Jaccard系数
 
 EVAL = [accuracy sensitivity specificity precision recall f_measure gmean Jaccard];
-fprintf('accuracy=%.4f, sensitivity=%.4f, specificity=%.4f, precision=%.4f, recall=%.4f, f_measure=%.4f, gmean=%.4f,,Jaccard=%.4f\n',accuracy, sensitivity, specificity, precision, recall, f_measure, gmean,Jaccard);
 end
