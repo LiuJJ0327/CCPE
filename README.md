@@ -5,7 +5,7 @@ CCPE is a cell cycle pseudotime estimation method characterizing cell cycle timi
 ![image](https://github.com/LiuJJ0327/CCPE/blob/main/images/figure1.PNG)<br/>
 
 ## Reference
-Our paper is published in Nucleic Acids Research, available at [Jiajia Liu, Mengyuan Yang, Weiling Zhao, Xiaobo Zhou, CCPE: cell cycle pseudotime estimation for single cell RNA-seq data, Nucleic Acids Research, 2021;, gkab1236](https://doi.org/10.1093/nar/gkab1236)
+Our paper was published in Nucleic Acids Research, available at [Jiajia Liu, Mengyuan Yang, Weiling Zhao, Xiaobo Zhou, CCPE: cell cycle pseudotime estimation for single cell RNA-seq data, Nucleic Acids Research, 2021](https://doi.org/10.1093/nar/gkab1236)
 
 ## Quick Start<br/>
 drtoolbox was downloaded from https://lvdmaaten.github.io/drtoolbox/<br/>
